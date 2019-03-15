@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LPIC-1 Training Material</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>LPIC-1 Training Material</h1>
+          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v1.0</small>
+        </section>
+
+        <section>
+          <h2>Revision</h2>
+          <table class="revision-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.0</a></td>
+                <td>Initialize document.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Credits</h2>
+          <ul>
+            <li><a href="https://github.com/hakimel/reveal.js" target="_blank">reveal.js</a></li>
+            <li><a href="https://github.com/rajgoel/reveal.js-plugins" target="_blank">reveal.js-plugins</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How to use the slide</h2>
+          <ul>
+            <li>Press arrow keys to navigate.</li>
+            <li>Press ESC key to open slide map.</li>
+            <li>Press m key to open content table.</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>LPIC-1: System Administrator</h2>
+          </section>
+          <section>
+            <h3>Overview</h3>
+            <ul>
+              <li><a href="https://www.lpi.org/our-certifications/lpic-1-overview" target="_blank">LPIC-1</a> is the first certification in <a href="https://www.lpi.org/" target="_blank">LPI</a>’s multi-level Linux professional certification program.
+              <li>LPIC-1 validates the candidate's ability to perform maintenance tasks in real world system administration.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Official information</h3>
+            <ul>
+              <li>Current Version: 5.0 (codes 101-500 & 102-500).</li>
+              <li>Objectives: <a href="https://www.lpi.org/our-certifications/exam-101-objectives" target="_blank">101-500</a>, <a href="https://www.lpi.org/our-certifications/exam-102-objectives" target="_blank">102-500</a>.</li>
+              <li>Prerequisites: No.</li>
+              <li>Requirements: Passing exams 101 and 102.</li>
+              <li>Validity Period: 5 years.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Goals & requirements</h3>
+            <ul>
+              <li>Understand the architecture of a Linux system.</li>
+              <li>Install and maintain a Linux workstation.<br /><small>Including X11 and setup it up as a network client.</small></li>
+              <li>Work at the Linux command line.<br /><small>Including common GNU and Unix commands.</small></li>
+              <li>Handle files and access permissions as well as system security.</li>
+              <li>Perform easy maintenance tasks.<br /><small>Help users, Add users to system, Backup and restore and Shutdown and reboot.</small></li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Exam 101</h2>
+        </section>
+        <section>
+          <h2>Topic 101: System architecture</h2>
+        </section>
+        <section>
+          <section>
+            <h2>Configure hardware settings</h2>
+          </section>
+          <section>
+            <h3>Overview</h3>
+            <ul>
+              <li><a href="https://developer.ibm.com/tutorials/l-lpic1-101-1/" target="_blank">https://developer.ibm.com/tutorials/l-lpic1-101-1/</a></li>
+              <li>Learn to configure and check the hardware for your Linux system.</li>
+              <li>Prepare for Objective 101.1 in Topic 101 of the Linux Server Professional (LPIC-1) exam 101.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Hardware settings</h3>
+            <ul>
+              <li>Settings can be configured via either BIOS (Basic Input-Output Services) or UEFI (Universal Extensible Firmware Interface) firmware.</li>
+              <li>The settings can be accessed when turn on computer then press a special button or key sequence.</li>
+              <li>Common settings:
+                <ul>
+                  <li>Date and time.</li>
+                  <li>Peripherals.</li>
+                  <li>Boot order.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Mass storage devices - Hard drives</h3>
+            <ul>
+              <li>Hard drives come in a sealed unit and contain several recording surfaces or platters.</li>
+              <li>There are many standard interfaces between the controller card and the computer.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Mass storage devices - CD and DVD drives</h3>
+            <ul>
+              <li>CD, DVD and Blu-Ray drives use optical storage to hold data.</li>
+              <li>They use the same kinds of interfaces used for hard drives.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Mass storage devices - Flash or thumb drives</h3>
+            <ul>
+              <li>These drives use nonvolatile RAM to store data.</li>
+              <li>They are reliable, fast, high-capacity and can be reused many times.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Mass storage devices - Solid-state drives</h3>
+            <ul>
+              <li>A newer form of drive .</li>
+              <li>They are light, fast, use less power and do not suffer from mechanical failure (?).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Hot plug and cold plug</h3>
+            <ul>
+              <li>The term hot plugging refers to devices that are removable from the computer every time.</li>
+              <li>The term cold plugging refers to devices that are physically attached to the computer at boot time.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Virtual files for hardware and system information</h3>
+            <ul>
+              <li><span style="color: red;">Virtual filesystems</span> provide an in-memory look at your system as the kernel sees it.</li>
+              <li><span style="color: red;">The virtual filesystems</span> provide insight into kernel data structures and into your system hardware.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Sysfs virtual filesystem</h3>
+            <ul>
+              <li><span style="color: red;">The sysfs</span> contains information about kernel objects to processes running in user space.</li>
+              <li><span style="color: red;">The sysfs</span> is an in-memory filesystem that is mounted at /sys.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Procfs virtual filesystem</h3>
+            <ul>
+              <li><span style="color: red;">The procfs</span> provides insight into many of the kernel data structures and even allows a few to be changed on the fly.</li>
+              <li><span style="color: red;">The procfs</span> presents process information and kernel processes.</li>
+              <li><span style="color: red;">The procfs</span> is an in-memory filesystem that is mounted at /proc.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>The lsdev command</h3>
+            <ul>
+              <li>The procinfo package contains <span style="color: red;">lsdev</span> command.</li>
+              <li><span style="color: red;">The lsdev</span> command presents the information from /proc by gathering the DMA, IRQ, and I/O port information for each device into a simple tabular format.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>udev and /dev</h3>
+            <ul>
+              <li>udev is a device manager needed for hot plugging devices.</li>
+              <li>Information about configured and active devices is contained in the /dev virtual filesystem.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Tools and utilities</h3>
+            <ul>
+              <li>Use lspci command without options to see a basic listing of your PCI devices.</li>
+              <li>Use lsusb command to display information about your USB devices.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Message passing and D-Bus</h3>
+            <ul>
+              <li>D-Bus is a message bus system, a simple way for applications to talk to one another.</li>
+              <li>D-Bus supplies both a system daemon (for events such as "new hardware device added" or "printer queue changed") and a per-user-login-session daemon (for general IPC needs among user applications). </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Kernel modules</h3>
+            <ul>
+              <li>Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand.</li>
+              <li>Kernel modules extend the functionality of the kernel without the need to reboot the system.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Reference</h2>
+          <ul>
+            <li><a href="https://developer.ibm.com/tutorials/l-lpic1-map/" target="_blank">Learn Linux, 101: A roadmap for LPIC-1</a></li>
+            <li><a href="https://www.tuxcademy.org/product/grd1/" target="_blank">Introduction to Linux for Users and Administrators</a></li>
+            <li><a href="https://www.tuxcademy.org/product/adm1/" target="_blank">Linux Administration I System and Users</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/menu/menu.js' },
+          { src: 'plugin/chart/Chart.min.js' },
+          { src: 'plugin/chart/csv2chart.js' },
+        ],
+        menu: {
+          // Specifies which side of the presentation the menu will
+          // be shown. Use 'left' or 'right'.
+          side: 'left',
+
+          // Specifies the width of the menu.
+          // Can be one of the following:
+          // 'normal', 'wide', 'third', 'half', 'full', or
+          // any valid css length value
+          width: 'normal',
+
+          // Add slide numbers to the titles in the slide list.
+          // Use 'true' or format string (same as reveal.js slide numbers)
+          numbers: false,
+
+          // Specifies which slide elements will be used for generating
+          // the slide titles in the menu. The default selects the first
+          // heading element found in the slide, but you can specify any
+          // valid css selector and the text from the first matching
+          // element will be used.
+          // Note: that a section data-menu-title attribute or an element
+          // with a menu-title class will take precedence over this option
+          titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+          // If slides do not have a matching title, attempt to use the
+          // start of the text content as the title instead
+          useTextContentForMissingTitles: false,
+
+          // Hide slides from the menu that do not have a title.
+          // Set to 'true' to only list slides with titles.
+          hideMissingTitles: true,
+
+          // Adds markers to the slide titles to indicate the
+          // progress through the presentation. Set to 'false'
+          // to hide the markers.
+          markers: true,
+
+          // Specify custom panels to be included in the menu, by
+          // providing an array of objects with 'title', 'icon'
+          // properties, and either a 'src' or 'content' property.
+          custom: false,
+
+          // Specifies the themes that will be available in the themes
+          // menu panel. Set to 'true' to show the themes menu panel
+          // with the default themes list. Alternatively, provide an
+          // array to specify the themes to make available in the
+          // themes menu panel, for example...
+          // [
+          //     { name: 'Black', theme: 'css/theme/black.css' },
+          //     { name: 'White', theme: 'css/theme/white.css' },
+          //     { name: 'League', theme: 'css/theme/league.css' }
+          // ]
+          themes: false,
+
+          // Specifies the path to the default theme files. If your
+          // presentation uses a different path to the standard reveal
+          // layout then you need to provide this option, but only
+          // when 'themes' is set to 'true'. If you provide your own
+          // list of themes or 'themes' is set to 'false' the
+          // 'themesPath' option is ignored.
+          themesPath: 'css/theme/',
+
+          // Specifies if the transitions menu panel will be shown.
+          // Set to 'true' to show the transitions menu panel with
+          // the default transitions list. Alternatively, provide an
+          // array to specify the transitions to make available in
+          // the transitions panel, for example...
+          // ['None', 'Fade', 'Slide']
+          transitions: false,
+
+          // Adds a menu button to the slides to open the menu panel.
+          // Set to 'false' to hide the button.
+          openButton: true,
+
+          // If 'true' allows the slide number in the presentation to
+          // open the menu panel. The reveal.js slideNumber option must
+          // be displayed for this to take effect
+          openSlideNumber: false,
+
+          // If true allows the user to open and navigate the menu using
+          // the keyboard. Standard keyboard interaction with reveal
+          // will be disabled while the menu is open.
+          keyboard: true,
+
+          // Normally the menu will close on user actions such as
+          // selecting a menu item, or clicking the presentation area.
+          // If 'true', the sticky option will leave the menu open
+          // until it is explicitly closed, that is, using the close
+          // button or pressing the ESC or m key (when the keyboard
+          // interaction option is enabled).
+          sticky: false,
+
+          // If 'true' standard menu items will be automatically opened
+          // when navigating using the keyboard. Note: this only takes
+          // effect when both the 'keyboard' and 'sticky' options are enabled.
+          autoOpen: true,
+
+          // If 'true' the menu will not be created until it is explicitly
+          // requested by calling RevealMenu.init(). Note this will delay
+          // the creation of all menu panels, including custom panels, and
+          // the menu button.
+          delayInit: false,
+
+          // If 'true' the menu will be shown when the menu is initialised.
+          openOnInit: false,
+
+          // By default the menu will load it's own font-awesome library
+          // icons. If your presentation needs to load a different
+          // font-awesome library the 'loadIcons' option can be set to false
+          // and the menu will not attempt to load the font-awesome library.
+          loadIcons: true
+        },
+        chart: {
+          defaults: {
+            global: {
+              title: { fontColor: "#586e75" },
+              legend: {
+                labels: { fontColor: "#586e75" },
+              },
+              responsive: true,
+              animation: null,
+            },
+            scale: {
+              scaleLabel: { fontColor: "#586e75" },
+              gridLines: { color: "#586e75", zeroLineColor: "#586e75" },
+              ticks: { fontColor: "#586e75" },
+            }
+          },
+          line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+          bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+          pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+          radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+        },
+      });
+      // Shows the slide number using default formatting
+      Reveal.configure({ slideNumber: true });
+    </script>
+  </body>
+</html>
