@@ -166,6 +166,14 @@
             </ul>
           </section>
           <section>
+            <h3>Linux</h3>
+            <ul>
+              <li>Linux is an operating system to a computer’s basic functionality. It forms the interface between the hardware and applications as well as the interface between
+                the hardware and users.</li>
+              <li>Linux kernel performs the actual operating system tasks of Linux. It takes care of elementary functions like memory and process management and hardware control.</li>
+            </ul>
+          </section>
+          <section>
             <h3>Virtual files for hardware and system information</h3>
             <ul>
               <li><span style="color: red;">Virtual filesystems</span> provide an in-memory look at your system as the kernel sees it.</li>
@@ -197,29 +205,37 @@
           <section>
             <h3>udev and /dev</h3>
             <ul>
-              <li>udev is a device manager needed for hot plugging devices.</li>
-              <li>Information about configured and active devices is contained in the /dev virtual filesystem.</li>
+              <li><span style="color: red;">udev</span> is a device manager needed for hot plugging devices.</li>
+              <li>Information about configured and active devices is contained in the <span style="color: red;">/dev</span> virtual filesystem.</li>
             </ul>
           </section>
           <section>
             <h3>Tools and utilities</h3>
             <ul>
-              <li>Use lspci command without options to see a basic listing of your PCI devices.</li>
-              <li>Use lsusb command to display information about your USB devices.</li>
+              <li>Use <span style="color: red;">lspci</span> command without options to see a basic listing of your PCI devices.</li>
+              <li>Use <span style="color: red;">lsusb</span> command to display information about your USB devices.</li>
             </ul>
           </section>
           <section>
             <h3>Message passing and D-Bus</h3>
             <ul>
-              <li>D-Bus is a message bus system, a simple way for applications to talk to one another.</li>
-              <li>D-Bus supplies both a system daemon (for events such as "new hardware device added" or "printer queue changed") and a per-user-login-session daemon (for general IPC needs among user applications). </li>
+              <li><span style="color: red;">D-Bus</span> is a message bus system, a simple way for applications to talk to one another.</li>
+              <li><span style="color: red;">D-Bus</span> supplies both a system daemon and a per-user-login-session daemon.</li>
             </ul>
           </section>
           <section>
             <h3>Kernel modules</h3>
             <ul>
-              <li>Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand.</li>
-              <li>Kernel modules extend the functionality of the kernel without the need to reboot the system.</li>
+              <li><span style="color: red;">Kernel modules</span> are pieces of code that can be loaded and unloaded into the kernel upon demand.</li>
+              <li><span style="color: red;">Kernel modules</span> extend the functionality of the kernel without the need to reboot the system.</li>
+              <li><span style="color: red;">Kernel modules</span> are located in /lib/modules and have had the extension .ko ("kernel object") since version 2.6.</li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>The <span style="color: red;">lsmod</span> command formats the information from /proc/modules to give you a current status of the modules in your Linux system.</li>
+              <li>The <span style="color: red;">modinfo</span> command gives you information about a module.</li>
+              <li>The <span style="color: red;">modprobe</span> command can each insert or remove one module from the system.</li>
             </ul>
           </section>
         </section>
