@@ -27,7 +27,7 @@
       <div class="slides">
         <section>
           <h2>LPIC-1 Training Material</h1>
-          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v1.1</small>
+          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v1.0</small>
         </section>
 
         <section>
@@ -41,11 +41,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>1.1</td>
-                <td>Add section Boot the system.</td>
-              </tr>
-              <tr>
-                <td><a href="./index.v1.0.html" target="_blank">1.0</a></td>
+                <td>1.0</a></td>
                 <td>Initialize document.</td>
               </tr>
             </tbody>
@@ -105,11 +101,9 @@
         <section>
           <h2>Exam 101</h2>
         </section>
-
         <section>
           <h2>Topic 101: System architecture</h2>
         </section>
-
         <section>
           <section>
             <h2>Configure hardware settings</h2>
@@ -119,7 +113,7 @@
             <ul>
               <li><a href="https://developer.ibm.com/tutorials/l-lpic1-101-1/" target="_blank">https://developer.ibm.com/tutorials/l-lpic1-101-1/</a></li>
               <li>Learn to configure and check the hardware for your Linux system.</li>
-              <li>Prepare for Objective 101.1 in Topic 101 of the LPIC-1 exam 101.</li>
+              <li>Prepare for Objective 101.1 in Topic 101 of the Linux Server Professional (LPIC-1) exam 101.</li>
             </ul>
           </section>
           <section>
@@ -242,113 +236,6 @@
               <li>The <span style="color: red;">lsmod</span> command formats the information from /proc/modules to give you a current status of the modules in your Linux system.</li>
               <li>The <span style="color: red;">modinfo</span> command gives you information about a module.</li>
               <li>The <span style="color: red;">modprobe</span> command can each insert or remove one module from the system.</li>
-            </ul>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Boot the system</h2>
-          </section>
-          <section>
-            <h3>Overview</h3>
-            <ul>
-              <li><a href="https://developer.ibm.com/tutorials/l-lpic1-101-2/" target="_blank">https://developer.ibm.com/tutorials/l-lpic1-101-2/</a></li>
-              <li>Understand the boot sequence from BIOS to boot completion</li>
-              <li>
-                <p>Understand how to:</p>
-                <ul>
-                  <li>Give common commands to the boot loader.</li>
-                  <li>Give options to the kernel at boot time.</li>
-                  <li>Check boot events in the log files.</li>
-                </ul>
-              </li>
-              <li>Prepare for Objective 101.2 in Topic 101 of the LPIC-1 exam 101.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Booting a computer</h3>
-            <ul>
-              <li>Booting: Turn on a computer then the computer loads an OS before you can work.</li>
-              <li>Boot loader: A program that loads an operating system when a computer is turned on.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Boot sequence</h3>
-            <ul>
-              <li>When a PC is turned on, code stored in non-volatile memory is executed to perform a self test.</li>
-              <li>That code loads the first sector from the Master Boot Record (MBR) of boot drive.</li>
-              <li>MBR finds a primary partition, loads a stage 1 boot loader.</li>
-              <li>The stage 1 boot loader loads a sequence of records called the stage 2 boot loader to bring up the OS.</li>
-            </ul>
-          </section>
-          <section>
-            <p>To influence your system’s boot process, you can:</p>
-            <ul>
-              <li>Change the device from which you boot.</li>
-              <li>Interact with the boot loader to select which of several possible configurations to boot or to edit the boot configuration.</li>
-              <li>Pass parameters to the kernel to control the way that your kernel starts the system once it has been loaded by the boot loader.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>The GRUB2 boot menu</h3>
-            <ul>
-              <li>The GRUB2 presents information from a configuration file (/boot/grub/grub.cfg or /boot/grub2/grub.cfg).</li>
-              <li>The GRUB2 normally presents a menu:
-                <ul>
-                  <li>Press Enter to boot the selected entry immediately.</li>
-                  <li>Press another key to stop the timeout.</li>
-                  <li>Enter e to edit a selected entry.</li>
-                  <li>Enter c to enter a GRUB2 command prompt. </li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Kernel parameters</h3>
-            <p>Kernel parameters are used to supply the kernel:</p>
-            <ul>
-              <li>Information about hardware parameters that it might not determine on its own.</li>
-              <li>To override values that it might otherwise detect.</li>
-              <li>To avoid detection of inappropriate values.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>The init process</h3>
-            <ul>
-              <li>When the kernel finishes loading, it usually starts /sbin/init.</li>
-              <li>This program remains running until the system is shut down.</li>
-              <li>It is always assigned process ID 1.</li>
-            </ul>
-          </section>
-          <section>
-            <ul>
-              <li>Whichever initialization you use, the initialization program boots the rest of your system by running a series of scripts.</li>
-              <li>These scripts typically live in /etc/rc.d/init.d or /etc/init.d.</li>
-              <li>When the scripts complete, a program called getty is started, which displays the login prompt on consoles.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Initial RAM disk</h3>
-            <ul>
-              <li>Initial RAM disk or initrd or initramfs is a file containing loadable kernel modules.</li>
-              <li>It allows kernel to be loaded and then load support only for devices that were actually installed in the system.</li>
-              <li>It is usually compressed and is loaded into RAM by the boot loader.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Boot events</h3>
-            <ul>
-              <li>During the Linux boot process, a large number of messages are emitted to the console, describing the kernel being booted, the hardware of your system, and other things related to the kernel.</li>
-              <li>dmesg command displays the kernel ring buffer which stores the kernel messages.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Logging system messages</h3>
-            <ul>
-              <li>Different to the kernel, processes use a daemon to log messages.</li>
-              <li>In traditional System V init systems, this is the syslogd daemon, which usually logs to /var/log/messages.</li>
-              <li>Systemd-based systems use the systemd-journald daemon to log messages, which can be inspected using the journalctl command.</li>
             </ul>
           </section>
         </section>
