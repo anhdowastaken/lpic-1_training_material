@@ -27,7 +27,7 @@
       <div class="slides">
         <section>
           <h2>LPIC-1 Training Material</h1>
-          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v2.0</small>
+          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v1.1</small>
         </section>
 
         <section>
@@ -41,16 +41,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>2.0</td>
-                <td>
-                  <ul>
-                    <li>Follow new document Practical LPIC-1 Linux Certification Study Guide.</li>
-                    <li>Add section Run Levels.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="./index.v1.1.html"></a>1.1</td>
+                <td>1.1</td>
                 <td>Add section Boot the system.</td>
               </tr>
               <tr>
@@ -358,79 +349,6 @@
               <li>Different to the kernel, processes use a daemon to log messages.</li>
               <li>In traditional System V init systems, this is the syslogd daemon, which usually logs to /var/log/messages.</li>
               <li>Systemd-based systems use the systemd-journald daemon to log messages, which can be inspected using the journalctl command.</li>
-            </ul>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Run Levels</h2>
-          </section>
-          <section>
-            <ul>
-              <li>One of Linux’s greatest strengths is the ability for multiple users to log in and work simultaneously on a single server.</li>
-              <li>However, there may be times when you just want to be alone.</li>
-              <li>Linux run levels allow you to define whether your OS will be available for everyone or just a single admin user with special purposes.</li>
-            </ul>
-          </section>
-          <section>
-            <p>Run levels can be invoked from the command line using either init or telinit.</p>
-            <table>
-              <tr>
-                <td>0</td>
-                <td>Halt</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Single user mode</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Multi-user, without NFS</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Full multi-user mode</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Unused</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>X11</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Reboot</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <ul>
-              <li>There might be other users logged into the system at the time you decide to change the run level, a message should be sent to them to announce.</li>
-              <li>Shutdown command will automatically send a message to the terminals.</li>
-              <li>You can also send messages between terminals using the wall command.</li>
-            </ul>
-          </section>
-          <section>
-            <ul>
-              <li>Years ago, run levels were controlled by daemon init.</li>
-              <li>A computer’s default run level was stored in a text file /etc/inittab.</li>
-            </ul>
-          </section>
-          <section>
-            <ul>
-              <li>These days, efficient ways of managing complex combinations of processes were needed.</li>
-              <li>In 2006, the Upstart process manager was introduced.</li>
-              <li>The behavior of the computer under specific run levels is defined by files kept in directories under /etc with names like rc0.d, rc1.d, and rc2.d.</li>
-            </ul>
-          </section>
-          <section>
-            <ul>
-              <li>The newest method is Systemd which focuses more on processes than run levels.</li>
-              <li>You can set your default run level by linking the default.target file in the /etc/systemd/system/ directory to the appropriate file in /usr/lib/systemd/system/.</li>
-              <li>Systemd is much more than just a simple process manager, it also includes a nice bundle of useful tools.</li>
             </ul>
           </section>
         </section>
