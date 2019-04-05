@@ -27,7 +27,7 @@
       <div class="slides">
         <section>
           <h2>LPIC-1 Training Material</h1>
-          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v2.1</small>
+          <small>Created by <a href="mailto:alex@twofive25.com">Alex</a><br />v2.0</small>
         </section>
 
         <section>
@@ -41,11 +41,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>2.1</td>
-                <td>Add section Disk Partitioning</td>
-              </tr>
-              <tr>
-                <td><a href="./index.v2.0.html"></a>2.0</td>
+                <td>2.0</td>
                 <td>
                   <ul>
                     <li>Follow new document Practical LPIC-1 Linux Certification Study Guide.</li>
@@ -435,124 +431,6 @@
               <li>The newest method is Systemd which focuses more on processes than run levels.</li>
               <li>You can set your default run level by linking the default.target file in the /etc/systemd/system/ directory to the appropriate file in /usr/lib/systemd/system/.</li>
               <li>Systemd is much more than just a simple process manager, it also includes a nice bundle of useful tools.</li>
-            </ul>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Disk Partitioning</h2>
-          </section>
-          <section>
-            <ul>
-              <li>The way you organize the drives will impact to both the performance and security of your OS.</li>
-              <li>You want your users to have access to the necessary resources but also want to protect sensitive or private data.</li>
-              <li>A disk partition effectively divides a single physical disk into smaller logical parts for specify purposes.</li>
-            </ul>
-          </section>
-          <section>
-            <p>Common default partition scheme contains three partitions:</p>
-            <ul>
-              <li>One for the root filesystem (designated with a single forward slash [/]).</li>
-              <li>One for the boot directory /boot.</li>
-              <li>One for the system swap file.<br /><small>A swap file is a section of your drive that emulates system memory (RAM) for times when demand exceeds the limits of your actual RAM.</small></li>
-            </ul>
-          </section>
-          <section>
-            <table style="font-size: 24px;">
-              <tr>
-                <th>Directory</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>bin</td>
-                <td>Essential command binaries</td>
-              </tr>
-              <tr>
-                <td>boot</td>
-                <td>Static files of the boot loader</td>
-              </tr>
-              <tr>
-                <td>dev</td>
-                <td>Device files</td>
-              </tr>
-              <tr>
-                <td>etc</td>
-                <td>Host-specific system configuration</td>
-              </tr>
-              <tr>
-                <td>lib</td>
-                <td>Essential shared libraries and kernel modules</td>
-              </tr>
-              <tr>
-                <td>media</td>
-                <td>Mount point for removable media</td>
-              </tr>
-              <tr>
-                <td>mnt</td>
-                <td>Mount point for mounting a filesystem temporarily</td>
-              </tr>
-              <tr>
-                <td>opt</td>
-                <td>Add-on application software packages</td>
-              </tr>
-              <tr>
-                <td>sbin</td>
-                <td>Essential system binaries</td>
-              </tr>
-              <tr>
-                <td>srv</td>
-                <td>Data for services provided by this system</td>
-              </tr>
-              <tr>
-                <td>tmp</td>
-                <td>Temporary files</td>
-              </tr>
-              <tr>
-                <td>usr</td>
-                <td>Secondary hierarchy</td>
-              </tr>
-              <tr>
-                <td>var</td>
-                <td>Variable data</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <h3>MBR Partition Table</h3>
-            <ul>
-              <li>The partition table is located in the master boot record (MBR) of a disk.</li>
-              <li>There are 3 types of partitions:
-                <ul>
-                  <li>Primary partitions can be bootable and are limited to four partitions per disk or RAID volume.</li>
-                  <li>Extended partitions can be thought of as containers for logical partitions.</li>
-                  <li>The extended partition is also counted as a primary partition.</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>GUID Partition Table</h3>
-            <ul>
-              <li>GPT layout solves size limitation (2TB) of MBR Partition Table.</li>
-              <li>GPT layout supports up to 128 primary partitions by default and does not use extended or logical partitions.</li>
-              <li>GPT partitions contain a GPT header and a GPT partition array.</li>
-              <li>The GPT header is in the first sector of the GPT partition and the partition array follows in the next sector.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Logical Volume Manager</h3>
-            <ul>
-              <li>LVM allows you to abstract the management of your disk space so a single filesystem can span multiple disks or partitions</li>
-              <li>LVM allows you to easily add or remove space from filesystems.</li>
-            </ul>
-          </section>
-          <section>
-            <p>LVM manages disk space using:</p>
-            <ul>
-               <li>Physical Volumes (PVs): A whole drive or a partition on a drive.</li>
-               <li>Volume Groups (VGs): A collection of one or more PVs.</li>
-               <li>Logical Volumes (LVs): An unit of space within a VG mounted as part of your Linux filesystem.</li>
             </ul>
           </section>
         </section>
